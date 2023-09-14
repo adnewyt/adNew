@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adnew</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="shortcut icon" href="logo.png">
+</head>
+<body>
+    <div id="contador">60</div>
+    <div id="video-container">
+        <iframe src="https://www.youtube.com/embed/XM-uCcKWzrY?autoplay=1&mute=1" width="560" height="315" title="LAS 15 MEJORES PELÍCULAS DE ROBOS EN NETFLIX" frameborder="0" allowfullscreen></iframe> 
+    </div>
+
+    <script>
+        // Función para iniciar el contador
+        function iniciarContador() {
+            var segundos = 60;
+            var contador = document.getElementById("contador");
+
+            function actualizarContador() {
+                contador.innerHTML = segundos;
+                segundos--;
+
+                if (segundos < 0) {
+                    clearInterval(intervalo);
+                    contador.innerHTML = "Esta siendo redirigido.";
+                    redirigir(); // Llamar a la función de redirección
+                }
+            }
+
+            actualizarContador();
+            var intervalo = setInterval(actualizarContador, 1000);
+        }
+
+        // Función para redirigir a otra página
+        function redirigir() {
+            setTimeout(function() {
+                window.location.href = "https://mega.nz/file/075G0IRY#0IPIQcy_DPTvQmsp7atf_ESqWYGIMwMC8TaNuLexuoY"; // Reemplaza con la URL de destino
+            }, 2000); // Redirigir después de 2 segundos (ajusta este valor según tus necesidades)
+        }
+
+        // Llamar a la función para iniciar el contador cuando la página se cargue
+        window.onload = function () {
+            iniciarContador();
+        };
+    </script>
+</body>
+</html>
