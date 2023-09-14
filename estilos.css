@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Color de fondo gris */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Utiliza min-height en lugar de height para ocupar al menos el alto de la pantalla */
+}
+
+#contador {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el contador y el video */
+}
+
+#video-container {
+    position: relative;
+    width: 80%; /* Establece un ancho máximo para el contenedor del video */
+    max-width: 560px; /* Ancho máximo para el video */
+}
+
+#video {
+    width: 100%; /* Haz que el video sea 100% del ancho del contenedor */
+    height: auto; /* Mantén la proporción original del video */
+}
